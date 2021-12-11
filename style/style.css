@@ -1,0 +1,129 @@
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: var(--light-gray);
+    width: 1440px;
+    margin-left: auto;
+}
+.container{
+    margin-top: 50px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 450px;
+    flex-direction: row;
+}
+.container > div{
+    display: grid;
+    grid-template-columns: calc(100%/7);
+    grid-template-rows: calc(100%6);
+}
+.container >div img{
+    width: 60px;
+    grid-column: 2/-1;
+    grid-row: 2/3;
+}
+.container > div  h1{
+    margin: 0;
+    font-family: Big Shoulders Display;
+    font-weight: 700px;
+    color: var(--light-gray);
+    grid-column: 2/-1;
+    grid-row: 3/4;
+  
+}
+.container > div p{
+    color: var(--paragraphs);
+    font-family: Lexend Deca;
+    font-weight: 400px;
+    grid-column: 2;
+    grid-row: 4/5;
+    padding-right: 20px;
+}
+.container > div button{
+    width: 125px;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid var(--light-gray);
+    color: var(--light-gray);
+    font-family:Lexend Deca;
+    font-weight: 400px;
+    grid-column: 2/-1;
+    grid-row: 5/6;
+}
+
+.sedans button:hover{
+    background-color: var(--light-gray);
+    color: var(--orange);
+}
+.suvs button:hover{
+    background-color: var(--light-gray);
+    color: var(--cyan);
+}
+.luxury button:hover{
+    background-color: var(--light-gray);
+    color: var(--dark-cyan);
+}
+.sedans{
+    background-color: var(--orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex:1;
+}
+.suvs{
+    background-color: var(--cyan);
+    flex: 1;
+}
+.luxury{
+    background-color: var(--dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex: 1;
+}
+.attribution{
+    padding: 20px;
+    margin: 50px auto;
+}
+@media all and (max-width:375px){
+    body{
+        width: 375px;
+        padding:10px ;
+        margin: 0;
+    }
+    .container{
+        flex-wrap:wrap;
+        width: 100%;
+
+    }
+    .container> div{
+        flex:1 1 100%;
+        width: 375;
+        height: 350px;
+    }
+    .sedans{
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 10px;
+    }
+    .luxury{
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 10px;
+    }
+    img{
+        padding-top: 25px;
+    }
+    .attribution{
+        display: none;
+    }
+}
+
