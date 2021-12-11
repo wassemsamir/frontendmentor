@@ -39,6 +39,7 @@ body{
     color: var(--light-gray);
     grid-column: 2/-1;
     grid-row: 3/4;
+    text-transform: uppercase;
   
 }
 .container > div p{
